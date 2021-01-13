@@ -9,7 +9,6 @@ public class BgmController : MonoBehaviour
     private AudioSource audioSource;
 
     float vol = 0.5f;
-    float dvol = 1f;
     float volrate = 0.15f;
 
     // Start is called before the first frame update
@@ -32,7 +31,7 @@ public class BgmController : MonoBehaviour
             vol = vol + (volrate * Time.deltaTime);
             audioSource.volume = vol;
         }
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.DownArrow))
         {
             vol = vol - (volrate * Time.deltaTime);
             audioSource.volume = vol;
